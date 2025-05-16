@@ -1,0 +1,379 @@
+body, h1, h2, h3, p, ul, li, figure, figcaption, table, form, fieldset, legend, input, textarea, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #111;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+header {
+  background: #f5f5f5;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logo {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: underline;
+  color: #111;
+  font-weight: bold;
+}
+
+nav a:visited {
+  color: #444;
+}
+
+nav a.current {
+  color: #0066cc;
+}
+
+main {
+  padding: 30px 40px;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.intro, .landmarks-intro, .info-intro, .contact-form-section {
+  margin-bottom: 40px;
+}
+
+.hero-section {
+  background-image: url("images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 89%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.hero-text {
+  color: white;
+  max-width: 900px;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-size: 3em;
+  margin-bottom: 0.3em;
+}
+
+.hero-text h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  font-weight: normal;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+
+.background-overlay {
+  display: none;
+}
+
+.landmark-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.landmark-card {
+  display: flex;
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  align-items: center;
+  gap: 20px;
+}
+
+.landmark-image img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.landmark-text {
+  flex: 1;
+}
+
+.landmark-text h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.landmark-text p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+caption {
+  caption-side: top;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.info-safety p {
+  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+input, textarea, button {
+  font-size: 1em;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  padding: 20px;
+  background: #f5f5f5;
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+details summary {
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+details p {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .landmark-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .landmark-image img {
+    max-width: 100%;
+  }
+
+  .intro-content {
+    flex-direction: column;
+    padding: 30px;
+    font-size: 1em;
+  }
+
+  .contact-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form-section, .contact-details {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-content {
+    padding: 20px;
+    font-size: 0.95em;
+  }
+
+  .landmark-card {
+    padding: 15px;
+  }
+}
+
+.landmark-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.landmarks-video {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landmarks-video h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.landmarks-video video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.landmarks-video details {
+  margin-top: 20px;
+  font-size: 1em;
+}
+
+.landmarks-video summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.contact-form-section {
+  flex: 1 1 400px;
+  max-width: 400px;
+}
+
+.contact-details {
+  flex: 1 1 300px;
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+}
+
+.contact-form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 100%;
+}
+
+aside {
+  background: #e8f4fc;
+  padding: 15px;
+  border-left: 4px solid #0000;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.info-content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.info-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.info-page main {
+  flex: 1;
+}

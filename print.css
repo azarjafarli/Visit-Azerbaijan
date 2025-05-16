@@ -1,0 +1,79 @@
+header, nav, footer, video, .skip-link {
+  display: none !important;
+}
+
+.landmarks-video {
+  display: none !important;
+}
+
+body {
+  font-size: 14pt;
+  color: black;
+  background: white;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+main, section, .landmark-card, form, table {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+
+.landmark-card, table {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+h1, h2, h3 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.landmark-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.landmark-image {
+  flex: 1 1 40%;
+}
+
+.landmark-text {
+  flex: 1 1 55%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, input, textarea, select, label {
+  display: none !important;
+}
+
+details {
+  display: block;
+}
+
+details[open] summary {
+  display: none;
+}
+
+details:not([open]) > * {
+  display: block;
+}
+
+details > summary {
+  display: none;
+}
+
